@@ -1,0 +1,41 @@
+﻿@model Employee_Microservice.Models.Login
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Login Page";
+}
+<div class="container"><h1>Welcome to login page</h1></div>
+<div>
+    <div class="container">
+   
+        <div class="col-sm-4">
+
+            <form class="form-horizontal" asp-action="Login">
+                <div class="form-outline mb-4">
+                    <label class="custom-control">Email</label>
+                    <input asp-for="UserName" class="form-control" type="text" />
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="custom-control">Password</label>
+                    <input asp-for="Passcode" class="form-control" type="password" />
+                </div>
+
+                <div class="form-outline mb-4">
+
+                    <input type="submit" value="Submit" class="btn btn-primary btn-block" />
+                </div>
+
+            </form>
+        </div>
+        
+    </div>
+
+</div>
+ @if (TempData["msg"]!=null)
+    {
+<script>
+      alert('@TempData["msg"]')
+</script>
+    }
