@@ -37,7 +37,7 @@ namespace Employee_Microservice
             services.AddTransient<IEmployeeRepo, EmployeeImplementation>();
             services.AddControllers();
             services.AddControllersWithViews();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+       //     services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             
         }
 

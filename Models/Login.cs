@@ -13,9 +13,13 @@ namespace Employee_Microservice.Models
     {
         [Key]
         public int Lid { get; set; }
+     
         [StringLength(50)]
+        [Required(ErrorMessage = "User Name is Mandatory")]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$",ErrorMessage ="Wrong Email format")]
         public string UserName { get; set; }
         [StringLength(50)]
+        [Required(ErrorMessage = "Password is Mandatory")]
         public string Passcode { get; set; }
     }
 }
